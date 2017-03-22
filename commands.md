@@ -1,0 +1,1 @@
+ run  bundle exec spring binstub --all
