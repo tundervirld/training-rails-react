@@ -74,3 +74,5 @@ bower.json
 
 # vim artifacts
 **.swp
+
+config/database.yml

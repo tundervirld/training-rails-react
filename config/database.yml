@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: training-rails-react_production
-  username: training-rails-react
-  password: <%= ENV['TRAINING-RAILS-REACT_DATABASE_PASSWORD'] %>
+  #database: training-rails-react_production
+  #username: training-rails-react
+  #password: <%= ENV['TRAINING-RAILS-REACT_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
