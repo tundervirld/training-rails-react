@@ -13,13 +13,14 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username:
-  password:
+  #username: 
+  #password: 
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: training-rails-react_development
+  #database: 
+  url: <%= ENV['TRAINING_RAILS_REACT_DATABASE_URL_DEV'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -49,7 +50,4 @@ test:
 #
 production:
   <<: *default
-  #database: training-rails-react_production
-  #username: training-rails-react
-  #password: <%= ENV['TRAINING-RAILS-REACT_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
